@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  font-size: 16px;
+  --blue-light: #28A9F6;
+  --blue-dark: #0172C0;
+  --blue-dark2: #11314E;
+  --white: #fff;
+  --backgroud: #e2e3e9;
+  --Montserrat: 'montserrat', Helvetica, sans-serif;
+
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+body {
+    font-family: var(--Montserrat);
+    overflow-x: hidden;
+}
+
+.top {
+    height: 80px;
+}
+
+
+/*TITULO DA PÁGINA - NOME DO SISTEMA - CONTEÚDO DA GALERIA------------------*/
+
+/*ESTILIZAÇÃO DO CONTAINER GERAL-------------------------------------------*/
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+    position: absolute;
+    background: url("../assets/img/bg-gallery.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    
+    
+}
+
+/*ESTILIZAÇÃO DO VIDEO EM REPRODUÇÃO----------------------------------------*/
+.container .main-video {
+    background: var(--white);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.container .main-video video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container .main-video .title {
+    color: var(--blue-dark2);
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.vid-actions {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--blue-dark2);
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.views {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+span {
+    font-weight: 800;
+    color: gray;
+}
+
+.like-share {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+i {
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    color: gray;
+}
+
+
+i:hover {
+    color: var(--blue-dark);
+    transform: scale(1.04);
+}
+
+
+/*ESTILIZAÇÃO DA GALERIA DE VIDEOS----------------------------------------*/
+.header-videoList {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 6px;
+}
+
+.header-videoList h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blue-dark);
+}
+
+.header-videoList p {
+    font-size: 0.8rem;
+
+}
+
+.container .video-list {
+    background: var(--white);
+    border-radius: 5px;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+/*ESTILIZAÇÃO SCROLLBAR*/
+.container .video-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.container .video-list::-webkit-scrollbar-track {
+    background: var(--backgroud);
+    border-radius: 50px;
+}
+
+.container .video-list::-webkit-scrollbar-thumb {
+    background: var(--blue-dark);
+    border-radius: 50px;
+}
+
+
+.container .video-list .vid video {
+    width: 100px;
+    border-radius: 5px;
+
+}
+
+/*ESTILIZAÇÃO DA GALERIA*/
+.container .video-list .vid {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+
+}
+
+#title-reprod {
+    font-weight: 800;
+}
+
+.container .video-list .vid:hover {
+    background: rgb(233, 233, 233);
+}
+
+.container .video-list .vid.active {
+    background: var(--blue-light);
+
+}
+
+.container .video-list .vid.active .title {
+    color: var(--white);
+}
+
+.container .video-list .vid {
+    color: var(--blue-dark2);
+    font-size: 17px;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width:1000px) {
+    .container {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+    }
+    .container .video-list {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width:1000px) {
+    .container {
+    grid-template-columns: 1fr;
+    }
+    .container .video-list {
+        margin-top: 0px;
+    }
+    .top {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    font-size: 16px;
+    --blue-light: #28A9F6;
+    --blue-dark: #0172C0;
+    --blue-dark2: #11314E;
+    --white: #fff;
+    --backgroud: #e2e3e9;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: border-box;
+    font-family: 'montserrat', "Open Sans", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/img/Thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    background: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 10%);
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    margin-top: -350px;
+    box-shadow: 7px 7px 5px 0px rgba(66, 154, 255, 0.2);
+}
+
+.logo img {
+    width: 130px;
+    
+    
+}
+
+.login span {
+    text-align: center;
+    color: #fff;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+}
+
+input {
+    width: 220px;
+    height: 38px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 10px;
+    border: 1px solid rgb(223, 223, 223);
+
+}
+
+input::placeholder {
+    font-size: 14px;
+    padding-left: 3px;
+    
+}
+
+form p {
+    color: var(--blue-dark2);
+    
+}
+
+.btn-entrar {
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 50px;
+    background: var(--blue-dark);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 10%);
+    cursor: pointer;
+    transition: .5s all;
+    margin-top: 30px;
+
+}
+
+a {
+    color: var(--white);
+
+}
+
+a:hover {
+    opacity: 90%;
+
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-dark), #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 3s linear infinite;
+  position: relative;
+  font-weight: 500;
+  margin-top: 10px;
+
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+  
+  
+  
